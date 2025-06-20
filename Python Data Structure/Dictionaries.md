@@ -17,7 +17,7 @@ What this means is that, you can use a tuple as a key in a dictionary, but you c
 
 
 ## Different Ways of Creating Dictionaries
-- Using curly braces: `{"a": 1, "b": 2}` 
+- **Using curly braces:** `{"a": 1, "b": 2}` 
 
 This is the most common and direct way to define a dictionary when you know the key-value pairs in advance.
 
@@ -25,7 +25,7 @@ This is the most common and direct way to define a dictionary when you know the 
 student_scores = {"Aisha": 80, "Kaycee": 70, "Collins": 78, "Maureen": 85, "Agnes": 75, "Jerry": 48}
 print(student_scores)
 ```
-- Using `dict()`: `dict(a=1, b=2)`
+- **Using `dict()`:** `dict(a=1, b=2)`
 
 Useful for creating dictionaries from keyword arguments when keys are valid identifiers (i.e., strings that are valid variable names).
 
@@ -34,7 +34,7 @@ student_scores = dict(Aisha = 80, Kaycee = 70, Collins = 78, Maureen = 85, Agnes
 print(student_scores)
 ```
 
-- Dictionary comprehension: `{k: v for k, v in iterable}`
+- **Dictionary comprehension:** `{k: v for k, v in iterable}`
 
 Useful for creating dictionaries from keyword arguments when keys are valid identifiers (i.e., strings that are valid variable names).
 
@@ -46,7 +46,7 @@ import random
 y = ["Aisha", "Kaycee", "Collins", "Maureen", "Agnes", "Jerry", ("Aisha", "jerry"), "Collins"] 
 student_score = {y[x]: random.randint(45, 100) for x in range(len(y))}
 
-When you run this code, you will notice that the second "Collins" 
+When you run this code, you will notice that the second "Collins" over-rides the first as you can't have a duplicate key. 
 ```
 
 ## Dictionary Usage
