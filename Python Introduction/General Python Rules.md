@@ -42,3 +42,48 @@ Following the [PEP 8 style guide](https://www.python.org/dev/peps/pep-0008/) ens
   * `cls` for class methods
 
 
+### 3. **Expression & Statements**
+
+* Don't check for empty containers or sequence by comparing the length to zero, E.g., 
+
+```python
+some_list = []
+
+#Don't use:
+if len(some_list) == 0:
+
+#Instead use:
+if not some_list:
+```
+
+* Instead of trying to fit all your code into a single line, use multiple lines, indentation, and parentheses, E.g.,
+
+```python
+#Don't do this:
+total = (price * quantity) - (discount * 0.1) + tax_rate * 50
+
+#Instead do this:
+total = (
+    (price * quantity)
+    - (discount * 0.1)
+    + tax_rate * 50
+)
+```
+
+* When importing libraries or modules, start at the top of the file with the standard, then the third party, lastly your project libraries. E.g., 
+
+```python
+# Standard library
+import datetime
+import os
+import sys
+
+# Third-party libraries
+import numpy as np
+import pandas as pd
+import requests
+
+# Your own modules
+import data_loader
+import utils
+```
