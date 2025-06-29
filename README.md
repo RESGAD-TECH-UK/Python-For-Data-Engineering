@@ -7,7 +7,7 @@ This repository covers essential Python concepts and workflows used in data
 
     [List]
 
-    [Dictionaries]
+    [Dictionaries](https://github.com/RESGAD-TECH-UK/Python-For-Data-Engineering/wiki/Dictionaries)
 
     [Sets]
 
