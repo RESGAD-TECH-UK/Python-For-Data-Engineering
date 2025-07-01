@@ -87,3 +87,27 @@ import requests
 import data_loader
 import utils
 ```
+
+### 4. **Prefer Multiple-Assignment Unpacking over Indexing**
+
+Unpacking lets you assign values from a tuple (or list) directly to variables in one step. It makes your code cleaner and easier to read than using indexes.
+
+Instead of this:
+
+```python
+item = ("bacon", 350)
+name = item[0]
+calories = item[1]
+
+# Use this:
+
+name, calories = item  #  Unpacking
+```
+
+**It also works in loops:**
+
+```python
+for rank, (name, calories) in enumerate(snacks, 1):
+    print(f"#{rank}: {name} has {calories} calories")
+```
+Why it matters: It avoids repetitive item[0], item[1] code, and makes your intent clearer.
