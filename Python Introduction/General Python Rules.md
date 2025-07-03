@@ -111,3 +111,32 @@ for rank, (name, calories) in enumerate(snacks, 1):
     print(f"#{rank}: {name} has {calories} calories")
 ```
 Why it matters: It avoids repetitive item[0], item[1] code, and makes your intent clearer.
+
+### 5. **Always Surround Single-Element Tuples with Parentheses**
+Python allows many ways to define tuples, but single-element tuples need special care.
+
+Tuple Basics
+```python
+t1 = (1, 2, 3)     # With parentheses
+t2 = 1, 2, 3       # Without parentheses (also valid)
+```
+These all create the same tuple, even with trailing commas:
+
+```python
+t = (1,)      # Single-element tuple
+not_tuple = (1)  # Just the number 1 (not a tuple)
+
+assert t != not_tuple
+```
+A stray comma at the end of a function call can turn a value into a tuple accidentally:
+
+```python
+result_1 = func(x, y,)   # Function returns a number
+result_2 = func(x, y,),   # Extra comma adds a tuple layer!
+
+print(type(result_1))  # int
+print(type(result_2))  # tuple
+```
+**Best Practice:**
+Always surround single-element tuples with parentheses:
+Avoid trailing commas in function calls or return statements unless you intend to return a tuple.

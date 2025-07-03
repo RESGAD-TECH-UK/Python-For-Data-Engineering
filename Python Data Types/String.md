@@ -1,0 +1,6 @@
+# Strings
+
+
+## String Methods
+
+#### **.startswith()**
