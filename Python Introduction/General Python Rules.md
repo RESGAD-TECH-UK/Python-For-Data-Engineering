@@ -139,4 +139,4 @@ print(type(result_2))  # tuple
 ```
 **Best Practice:**
 Always surround single-element tuples with parentheses:
-Avoid trailing commas in function calls or return statements unless you intend to return a tuple.
+Avoid trailing commas in function calls or return statements unless you intend to return a tuple..
